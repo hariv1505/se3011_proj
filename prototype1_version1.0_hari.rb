@@ -1,4 +1,6 @@
 require 'csv'
+require 'test/unit'
+extend Test::Unit::Assertions
 
 def read_csv(parameter_file)
   s = IO.read(parameter_file)
@@ -14,36 +16,42 @@ end
 def read_original(sirca_file)
   entries = read_csv(sirca_file)
   all_trades = []
-  entries.foreach |i| do
-    if (entries[i][:record_type] == "TRADE")
-      #add to all_trades
+  counter = 0
+  entries.each do |entry|
+    if (entry[:record_type] == "TRADE")
+      all_trades << entry
     end
   end
   
   return all_trades
 end
   
-# def find_returns(all_trades)
-#   #create array of "prices" (empty now)
-#   #ensure all_trades is ordered by time
-#   #for each record in all_trades
-#     #take price
-#     #add to array of prices
-#     #ensure it is done in chronological order
-#   #ensure size of this array is sizes of all_trades
-#   
-#   #create array of "returns" (starts off empty) - called returns_array
-#   #for each value in "prices"
-#     #if its the first, skip
-#     #else
-#       #take last value of new returns_array
-#       #do final - initial price, divided by initial
-#       #store decimal in returns array in chronological order
-#   #ensure size of this array is the size of all_trades - 1
-#   
-#   #return returns_array
-# end
-#   
+def find_returns(all_trades)
+  prices = []
+  #ensure all_trades is ordered by time
+  all_trades.each do |trade|
+    p = trade[:price]
+    prices << p
+    #ensure it is done in chronological order
+  end
+  assert_equal(all_trades.size, prices.size, "first failed")
+  
+  returns_array = []
+  returns_array << nil
+  prices.length.times do |i|
+    if (i != 0)
+      init_p = returns_array[i-1].to_f
+      final_p = prices[i].to_f
+      ret = (final_p - init_p)/init_p
+      
+      returns_array << ret.to_f
+    end
+  end
+  assert_equal(all_trades.size, returns_array.size, "second failed")
+  
+  return returns_array
+end
+  
 # def find_SMAs(n, returns) #(takes parameter for INTEGER we take average of - n)
 #   #create array of SMAs - called SMA_array
 #   #iterative from 'n'th element till last - OR 1st to (total-n)th [assume first now]
@@ -99,15 +107,14 @@ end
 
 #STEP 0
 params = read_params('parameters/v1.0.param')
-puts params
 n = params[0][:n]
 th = params[0][:th]
    
 #STEP 1
-all_trades = read_original('the_original_file')
+all_trades = read_original('bhp5Feb13.csv')
   
-# #STEP 2
-# returns_array = find_returns(all_trades)
+#STEP 2
+returns_array = find_returns(all_trades)
 # 
 # #STEP 3
 # SMA_array = find_SMAs(n, returns_array)
