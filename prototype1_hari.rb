@@ -52,36 +52,51 @@ def find_returns(all_trades)
   return returns_array
 end
   
-# def find_SMAs(n, returns) #(takes parameter for INTEGER we take average of - n)
-#   #create array of SMAs - called SMA_array
-#   #iterative from 'n'th element till last - OR 1st to (total-n)th [assume first now]
-#   #for each element in returns:
-#     #ignore first (n-1) elements
-#     #after that, take the next n elements, and average them
-#     #store them in the SMA_array in chronological order
-#   #ensure size of this array is size of all_trades - (t-1)
-#   
-#   #return SMA_array
-# end
-#   
-# def create_transactions(th, SMA_array)#(takes decimal/float parameter for threshold - th)
-#   #absolute value th - lets call this threshold
-#   #make array of TSvs (differences) - involves as per below:
-#   #for each element of SMA_array
-#     #if first, ignore (but track which 
-#     #else
-#       #take last value of new "TSvs" array
-#       #find final-initial SMA (subtraction)
-#       #record in new array TSvs
-#   
-#   #create new array of TS - what are we going to do: this should only store B or A for 'bid' or 'ask'. Call this TS_array
-#   #for each TSvs, do:
-#     #if elem < -'th' -> store an A
-#     #elsif elem > 'th' -> store B
-#     #else -> store null (to indicate do nothing)
-#   
-#   #return TS_array
-# end
+def find_SMAs(n, returns)
+  sma_array = []
+  (n-1).times do |i|
+    sma_array << nil
+    print nil
+  end
+  
+  puts returns.size
+  (returns.size-(n-1)).times do |j|
+    if (returns[j] != nil)
+      sum = 0.to_f
+      (n-1).times do |k|
+	sum = sum + returns[(j+k)].to_f
+      end
+    
+      sma = (sum/n).to_f
+      sma_array << sma
+    else
+      sma_array << nil
+    end
+  end
+  
+  assert_equal(sma_array.size, returns.size)
+  
+  return sma_array
+end
+  
+def create_transactions(th, sma_array)
+  threshold = th.abs
+  #make array of TSvs (differences) - involves as per below:
+  #for each element of SMA_array
+    #if first, ignore (but track which 
+    #else
+      #take last value of new "TSvs" array
+      #find final-initial SMA (subtraction)
+      #record in new array TSvs
+  
+  #create new array of TS - what are we going to do: this should only store B or A for 'bid' or 'ask'. Call this ts_array
+  #for each TSvs, do:
+    #if elem < -'th' -> store an A
+    #elsif elem > 'th' -> store B
+    #else -> store null (to indicate do nothing)
+  
+  #return ts_array
+end
 #   
 # def create_entries(TS_array, all_trades) #create transactions in new CSV file using data
 #   #create empty array of new record objects that have been generated
@@ -107,21 +122,20 @@ end
 
 #STEP 0
 params = read_params('parameters/v1.0.param')
-n = params[0][:n]
-th = params[0][:th]
+n = params[0][:n].to_i
+th = params[0][:th].to_f
    
 #STEP 1
 all_trades = read_original('bhp5Feb13.csv')
   
 #STEP 2
 returns_array = find_returns(all_trades)
-puts returns_array
-# 
-# #STEP 3
-# SMA_array = find_SMAs(n, returns_array)
-# 
-# #STEP 4
-# result_transactions = create_transactions(th, SMA_array)
-# 
+
+#STEP 3
+sma_array = find_SMAs(n, returns_array)
+
+#STEP 4
+result_transactions = create_transactions(th, sma_array)
+
 # #STEP 5
 # create_entries(TS_array, all_trades)
