@@ -1,34 +1,37 @@
 require 'csv'
 
-def read_params(parameter_file)
-  puts "hi"
+def read_csv(parameter_file)
   s = IO.read(parameter_file)
   csv = CSV.new(s, {:headers => true, :header_converters => :symbol})
   return csv.to_a.map {|row| row.to_hash }
+end
+
+def read_params(parameter_file)
+  read_csv(parameter_file)
 
 end
-# 
-# def read_original
-#   #read in CSV file
-#   #create array of record objects that will store all "TRADE"s - called "all_trades"
-#   
-#   
-#   #iterate through each row
-#     #if line[index of "Record type"] == TRADE
-#       #create "record" object for this line
-#       #add to all_trades
-#     #else
-#       #go next
-#   
-#   #OR.......
-#   
-#   #there is a class where we can read in the whole file easily. class is called csv - see http://www.ruby-doc.org/stdlib-2.0/libdoc/csv/rdoc/CSV.html
-#   #iterate through result and pick out ones where record type == "TRADE"
-#   
-#   
-#   #return all_trades
-# end
-#   
+
+def read_original(sirca_file)
+  #read in CSV file
+  #create array of record objects that will store all "TRADE"s - called "all_trades"
+  
+  
+  #iterate through each row
+    #if line[index of "Record type"] == TRADE
+      #create "record" object for this line
+      #add to all_trades
+    #else
+      #go next
+  
+  #OR.......
+  
+  #there is a class where we can read in the whole file easily. class is called csv - see http://www.ruby-doc.org/stdlib-2.0/libdoc/csv/rdoc/CSV.html
+  #iterate through result and pick out ones where record type == "TRADE"
+  
+  
+  #return all_trades
+end
+  
 # def find_returns(all_trades)
 #   #create array of "prices" (empty now)
 #   #ensure all_trades is ordered by time
@@ -101,23 +104,25 @@ end
 #   #file is created in directory, do not return anything
 # end
 
+############---MAIN---############
+
+#STEP 0
 params = read_params('parameters/v1.0.param')
 puts params
 n = params[0][:n]
 th = params[0][:th]
    
-#   #STEP 1
-#   all_trades = read_original
-#   
-#   #STEP 2
-#   returns_array = find_returns(all_trades)
-#   
-#   #STEP 3
-#   SMA_array = find_SMAs(n, returns_array)
-#   
-#   #STEP 4
-#   result_transactions = create_transactions(th, SMA_array)
-#   
-#   #STEP 5
-#   create_entries(TS_array, all_trades)
-#   
+#STEP 1
+all_trades = read_original('the_original_file')
+  
+# #STEP 2
+# returns_array = find_returns(all_trades)
+# 
+# #STEP 3
+# SMA_array = find_SMAs(n, returns_array)
+# 
+# #STEP 4
+# result_transactions = create_transactions(th, SMA_array)
+# 
+# #STEP 5
+# create_entries(TS_array, all_trades)

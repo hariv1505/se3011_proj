@@ -1,0 +1,119 @@
+require 'csv'
+
+def read_csv(parameter_file)
+  s = IO.read(parameter_file)
+  csv = CSV.new(s, {:headers => true, :header_converters => :symbol})
+  return csv.to_a.map {|row| row.to_hash }
+end
+
+def read_params(parameter_file)
+  read_csv(parameter_file)
+
+end
+
+def read_original(sirca_file)
+  entries = read_csv(sirca_file)
+  all_trades = []
+  entries.foreach |i| do
+    if (entries[i][:record_type] == "TRADE")
+      #add to all_trades
+    end
+  end
+  
+  return all_trades
+end
+  
+# def find_returns(all_trades)
+#   #create array of "prices" (empty now)
+#   #ensure all_trades is ordered by time
+#   #for each record in all_trades
+#     #take price
+#     #add to array of prices
+#     #ensure it is done in chronological order
+#   #ensure size of this array is sizes of all_trades
+#   
+#   #create array of "returns" (starts off empty) - called returns_array
+#   #for each value in "prices"
+#     #if its the first, skip
+#     #else
+#       #take last value of new returns_array
+#       #do final - initial price, divided by initial
+#       #store decimal in returns array in chronological order
+#   #ensure size of this array is the size of all_trades - 1
+#   
+#   #return returns_array
+# end
+#   
+# def find_SMAs(n, returns) #(takes parameter for INTEGER we take average of - n)
+#   #create array of SMAs - called SMA_array
+#   #iterative from 'n'th element till last - OR 1st to (total-n)th [assume first now]
+#   #for each element in returns:
+#     #ignore first (n-1) elements
+#     #after that, take the next n elements, and average them
+#     #store them in the SMA_array in chronological order
+#   #ensure size of this array is size of all_trades - (t-1)
+#   
+#   #return SMA_array
+# end
+#   
+# def create_transactions(th, SMA_array)#(takes decimal/float parameter for threshold - th)
+#   #absolute value th - lets call this threshold
+#   #make array of TSvs (differences) - involves as per below:
+#   #for each element of SMA_array
+#     #if first, ignore (but track which 
+#     #else
+#       #take last value of new "TSvs" array
+#       #find final-initial SMA (subtraction)
+#       #record in new array TSvs
+#   
+#   #create new array of TS - what are we going to do: this should only store B or A for 'bid' or 'ask'. Call this TS_array
+#   #for each TSvs, do:
+#     #if elem < -'th' -> store an A
+#     #elsif elem > 'th' -> store B
+#     #else -> store null (to indicate do nothing)
+#   
+#   #return TS_array
+# end
+#   
+# def create_entries(TS_array, all_trades) #create transactions in new CSV file using data
+#   #create empty array of new record objects that have been generated
+#   #these all have record type of ENTER
+#   #for each elem of TS: (we need to create a record object and store it in the new array)
+#     #Bid/Ask value (B or A) is taken from TS_array
+#     #... (most is taken from respective transaction in all_trades, provided we keep index of each, which represents t value)
+#   
+#   #write out to new file "newEntries.csv"
+#   #copy-paste line 1 of original CSV into new CSV somehow
+#   #for each object:
+#     #write out first characteristic
+#     #for each other characteristic (not inclusive of first) (dunno if this can be done iteratively...)
+#       # write out a comma
+#       #	write out it out
+#       #NB dont end with a comma
+#     #write out newline
+#   
+#   #file is created in directory, do not return anything
+# end
+
+############---MAIN---############
+
+#STEP 0
+params = read_params('parameters/v1.0.param')
+puts params
+n = params[0][:n]
+th = params[0][:th]
+   
+#STEP 1
+all_trades = read_original('the_original_file')
+  
+# #STEP 2
+# returns_array = find_returns(all_trades)
+# 
+# #STEP 3
+# SMA_array = find_SMAs(n, returns_array)
+# 
+# #STEP 4
+# result_transactions = create_transactions(th, SMA_array)
+# 
+# #STEP 5
+# create_entries(TS_array, all_trades)
