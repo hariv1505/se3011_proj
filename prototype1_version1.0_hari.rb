@@ -30,7 +30,7 @@ def find_returns(all_trades)
   prices = []
   #ensure all_trades is ordered by time
   all_trades.each do |trade|
-    p = trade[:price]
+    p = trade[:price].to_f
     prices << p
     #ensure it is done in chronological order
   end
@@ -40,7 +40,7 @@ def find_returns(all_trades)
   returns_array << nil
   prices.length.times do |i|
     if (i != 0)
-      init_p = returns_array[i-1].to_f
+      init_p = prices[i-1].to_f
       final_p = prices[i].to_f
       ret = (final_p - init_p)/init_p
       
@@ -115,6 +115,7 @@ all_trades = read_original('bhp5Feb13.csv')
   
 #STEP 2
 returns_array = find_returns(all_trades)
+puts returns_array
 # 
 # #STEP 3
 # SMA_array = find_SMAs(n, returns_array)
