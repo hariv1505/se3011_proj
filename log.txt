@@ -1,13 +1,13 @@
-PARAMETERS ARE: n = 3, TH = 0.0
+PARAMETERS ARE: n = 3, TH = 1.0
 
-Number of total records: n = 100226
-Number of total TRADES: n = 16485
+Number of total records: 100226
+Number of total TRADES: 16485
 
 Prices gathered.
 Returns gathered.
 
 SMAs gathered.
 
-3532 ENTER transactions gathered.
+0 ENTER transactions gathered.
 
 File created - see 'newEntries.csv'

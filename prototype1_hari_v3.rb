@@ -173,7 +173,7 @@ end
 ############---MAIN---############
 
 #STEP 0
-params = read_params('parameters/v1.0.param')
+params = read_params('parameters.param')
 n = params[0][:n].to_i
 th = params[0][:th].to_f
 $logfile.write("PARAMETERS ARE: n = #{n}, TH = #{th}\n\n")
