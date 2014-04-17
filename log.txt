@@ -1,0 +1,15 @@
+PARAMETERS ARE: n = 3, TH = 5.0e-05
+
+Number of total records: 100226
+Number of total TRADES: 16485
+
+Prices gathered.
+Returns gathered.
+
+SMAs gathered.
+
+2306 ENTER transactions gathered.
+
+File created - see 'newEntries.csv'
+
+Total time was 6.453839 seconds.
