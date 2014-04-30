@@ -1,7 +1,0 @@
-Starting time at 2014-04-30 15:28:16 +1000
-PARAMETERS ARE: n = 3, TH = 0.00005, input = bhp5Feb13.csv, output = newEntries.csv
-
-Wrong CSV format for input file bhp5Feb13.csv - wrong headers.
-
-Ending time at 2014-04-30 15:28:22 +1000
-Total time was 6.421581 seconds.
