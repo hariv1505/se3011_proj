@@ -39,7 +39,8 @@ def find_returns(all_trades)
     p = trade[:price].to_f
     prices << p
     #ensure it is done in chronological order
-  end
+  endme
+
 
   assert_equal(all_trades.size, prices.size, "first failed")
   $logfile.write("Prices gathered.\n")
@@ -146,6 +147,8 @@ def create_transactions(th, sma_array)
   return ts_array
 end
 
+
+
 def create_entries(result_transactions, all_trades)
     
     new_records = all_trades.dup    
@@ -174,15 +177,29 @@ end
 ############---MAIN---############
 
 start_time = Time.now
+#puts "Starting time at " + start_time.inspect
 
 #STEP 0
 params = read_params('parameters.param')
 n = params[0][:n].to_i
 th = params[0][:th].to_f
-$logfile.write("PARAMETERS ARE: n = #{n}, TH = #{th}\n\n")
+$logfile.write("PARAMETERS ARE: n = #{n}, TH = #{th}, input = #{params[0][:i]}, output = input = #{params[0][:o]}\n\n")
+
+#READING FLAGS
+ARGV.size.times do |i|
+  if (ARGV[i].to_s == "-i" || ARGV[i].to_s == "--input") {
+    params[0][:i] = ARGV[i+1];
+  } elsif (ARGV[i].to_s == "-o" || ARGV[i].to_s == "--output") {
+    params[0][:o] = ARGV[i+1];
+  } elsif (ARGV[i].to_s == "-n") {
+    params[0][:n] = ARGV[i+1];
+  } elsif (ARGV[i].to_s == "-th" || ARGV[i].to_s == "--threshold") {
+    params[0][:th] = ARGV[i+1];
+  }
+end
   
 #STEP 1
-all_trades = read_original('bhp5Feb13.csv')
+all_trades = read_original(params[0][:i])
   
 #STEP 2
 returns_array = find_returns(all_trades)
@@ -197,4 +214,6 @@ result_transactions = create_transactions(th, sma_array)
 create_entries(result_transactions, all_trades)
 
 #TOTAL TIME
-$logfile.write("Total time was #{Time.now - start_time} seconds.");
+end_time = Time.now
+#puts "Ending time at " + end_time.inspect
+$logfile.write("Total time was #{end_time - start_time} seconds.");
