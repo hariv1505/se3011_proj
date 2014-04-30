@@ -35,7 +35,7 @@ end
 def read_original(sirca_file)
   entries = read_csv(sirca_file) 
   $first_line = $s.split("\n")[0]
-  if ($first_line.eql?("Instrument,Date,Time,Record Type,Price,Volume,Undisclosed Volume,Value,Qualifiers,Trans ID,Bid ID,Ask ID,Bid/Ask,Entry Time,Old Price,Old Volume,Buyer Broker ID,Seller Broker ID"))
+  if ($first_line.eql?("#Instrument,Date,Time,Record Type,Price,Volume,Undisclosed Volume,Value,Qualifiers,Trans ID,Bid ID,Ask ID,Bid/Ask,Entry Time,Old Price,Old Volume,Buyer Broker ID,Seller Broker ID"))
     all_trades = []
     counter = 0
     entries.each do |entry|
@@ -157,12 +157,11 @@ end
 
 def create_entries(result_transactions, all_trades, input, output)
     
-    new_records = all_trades.dup
-    file = File.new(output, "w")
+  new_records = all_trades.dup
+  file = File.new(output, "w")
     
-    file.write($first_line + "\n")   
-    #counter to concurrently iterate through new_records with corresponding result_transaction value 
-    i=0
+  file.write("Instrument,Date,Time,Record Type,Price,Volume,Undisclosed Volume,Value,Qualifiers,Trans ID,Bid ID,Ask ID,Bid/Ask,Entry Time,Old Price,Old Volume,Buyer Broker ID,Seller Broker ID" + "\n")   
+  i=0
     
   result_transactions.each do |n|
     if n == 'A'
