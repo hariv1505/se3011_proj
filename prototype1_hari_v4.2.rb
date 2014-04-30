@@ -165,18 +165,16 @@ def create_entries(result_transactions, all_trades, input, output)
     i=0
     
   result_transactions.each do |n|
-      if n == 'A'
-	#If BID/ASK is A, the characteristics will be written to file with record_type changed to ENTER and bidask value as ASK
-	file.write("#{new_records[i][:instrument]},#{new_records[i][:date]},#{new_records[i][:time]},ENTER,#{new_records[i][:price]},100,#{new_records[i][:undisclosed_volume]},#{100*(new_records[i][:price].to_f)},#{new_records[i][:qualifiers]},,#{2*i},#{2*i + 1},A,#{new_records[i][:entry_time]},#{new_records[i][:old_price]},#{new_records[i][:old_volume]},#{new_records[i][:buyer_broker_id]},#{new_records[i][:seller_broker_id]}\n")          
-      elsif n == 'B'
-	#If BID/ASK is A, the characteristics will be written to file with record_type changed to ENTER and bidask value as BID
-	file.write("#{new_records[i][:instrument]},#{new_records[i][:date]},#{new_records[i][:time]},ENTER,#{new_records[i][:price]},100,#{new_records[i][:undisclosed_volume]},#{100*(new_records[i][:price].to_f)},#{new_records[i][:qualifiers]},,#{2*i},#{2*i + 1},B,#{new_records[i][:entry_time]},#{new_records[i][:old_price]},#{new_records[i][:old_volume]},#{new_records[i][:buyer_broker_id]},#{new_records[i][:seller_broker_id]}\n")
-      end      
-      i=i+1
-    end
+    if n == 'A'
+      file.write("#{new_records[i][:instrument]},#{new_records[i][:date]},#{new_records[i][:time]},ENTER,#{new_records[i][:price]},100,#{new_records[i][:undisclosed_volume]},#{100*(new_records[i][:price].to_f)},#{new_records[i][:qualifiers]},,#{2*i},#{2*i + 1},A,#{new_records[i][:entry_time]},#{new_records[i][:old_price]},#{new_records[i][:old_volume]},#{new_records[i][:buyer_broker_id]},#{new_records[i][:seller_broker_id]}\n")          
+    elsif n == 'B'
+      file.write("#{new_records[i][:instrument]},#{new_records[i][:date]},#{new_records[i][:time]},ENTER,#{new_records[i][:price]},100,#{new_records[i][:undisclosed_volume]},#{100*(new_records[i][:price].to_f)},#{new_records[i][:qualifiers]},,#{2*i},#{2*i + 1},B,#{new_records[i][:entry_time]},#{new_records[i][:old_price]},#{new_records[i][:old_volume]},#{new_records[i][:buyer_broker_id]},#{new_records[i][:seller_broker_id]}\n")
+    end      
+    i=i+1
+  end
 	
-    file.close
-    $logfile.write("File created - see '#{output}'\n\n")
+  file.close
+  $logfile.write("File created - see '#{output}'\n\n")
 end
 
 def read_flags
