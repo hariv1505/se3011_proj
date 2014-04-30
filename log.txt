@@ -1,17 +1,7 @@
-Starting time at 2014-04-30 15:08:41 +1000
+Starting time at 2014-04-30 15:28:16 +1000
 PARAMETERS ARE: n = 3, TH = 0.00005, input = bhp5Feb13.csv, output = newEntries.csv
 
-Number of total records: 100226
-Number of total TRADES: 16485
+Wrong CSV format for input file bhp5Feb13.csv - wrong headers.
 
-Prices gathered.
-Returns gathered.
-
-SMAs gathered.
-
-2306 ENTER transactions gathered.
-
-File created - see 'newEntries.csv'
-
-Ending time at 2014-04-30 15:08:48 +1000
-Total time was 7.05354 seconds.
+Ending time at 2014-04-30 15:28:22 +1000
+Total time was 6.421581 seconds.
