@@ -1,0 +1,23 @@
+------------------
+
+Developer Team: P.Raju D.Soriente
+Awesome Module V1.2
+Start Date/Time: 18/04/2014 01:09:24
+End Date/Time: 18/04/2014 01:09:24
+Execution Time: 21 milliseconds
+Output Filepath: /home/hari/Desktop/Group7
+
+----PARAMETERS----
+
+Filename: Not Provided
+Time Frame Start: Not Provided
+Time Frame End: Not Provided
+Moving Average: Not Provided
+Threshold: Not Provided
+
+-----ERROR/S------
+
+Missing parameter.properties file
+*Check parameter file is in the same directory as module
+
+------------------
