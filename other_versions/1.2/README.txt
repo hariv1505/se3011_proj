@@ -12,10 +12,6 @@ Execute the application simply by double-clicking msm_v_1_2.exe.
 To execute the application using custom parameters, direct yourself into the directory using the command prompt and type "msm_v_1_2.exe".
 These methods, without the use of flags will run the application using default parameters.
 
-Linux OS
-Execute the application by direct yourself into the directory using the command prompt and type "wine msm_v_1_2.exe".
-This methods, without the use of flags will run the application using default parameters.
-
 Further usage: msm_v_1_2 [options]
     -w, --window-size=window         Window Size for Moving Averages
     -t, --threshold=th               Threshold for moving averages
@@ -25,7 +21,6 @@ Further usage: msm_v_1_2 [options]
 
 OS COMPATIBLITY
 Windows XP, Vista, 7, 8, 8.1
-Linux Ubuntu 12, 13
 
 Thank you,
 - The G's

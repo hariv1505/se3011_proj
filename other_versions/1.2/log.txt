@@ -1,0 +1,17 @@
+Starting time at 2014-05-01 14:22:54 +1000
+PARAMETERS ARE: n = 3, TH = 0.00005, input = bhp5Feb13.csv, output = newEntries.csv
+
+Number of total records: 100226
+Number of total TRADES: 16485
+
+Prices gathered.
+Returns gathered.
+
+SMAs gathered.
+
+2306 ENTER transactions gathered.
+
+File created - see 'newEntries.csv'
+
+Ending time at 2014-05-01 14:22:59 +1000
+Total time was 4.677366097 seconds.
