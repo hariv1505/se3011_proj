@@ -70,13 +70,10 @@ public class GUI {
 			String nVal = nField.getText();
 			String thVal = thField.getText();
 			String outVal = outField.getText();
+			System.out.println(nVal + " " + thVal + " " + outVal);
 
-			if (modulePath != null) {
-				if (modulePath.equals("")) {
-					modulePath = "msm_v_1_2.exe";
-				}
-			} else {
-				modulePath = "msm_v_1_2.exe";
+			if (modulePath == null || modulePath.equals("")) {
+				modulePath = "msm_v_1_2.exe";	
 			}
 
 			if (filePath == null || filePath.matches("")) {
@@ -85,7 +82,7 @@ public class GUI {
 				return;
 			}
 
-			String s = modulePath + " " + "-i " + filePath;
+			String s = modulePath + " " + "-i '" + filePath + "'";
 			
 			if (nVal != null && !nVal.equals("")) {
 				System.out.println(nVal);
@@ -173,9 +170,10 @@ public class GUI {
 
 		JFrame window = new JFrame("GUI for MSM Module");
 		window.setContentPane(content);
-		window.setSize(350, 200);
+		window.setSize(350, 300);
 		window.setLocation(100, 100);
 		window.setVisible(true);
+		window.setResizable(false);
 
 	}
 
