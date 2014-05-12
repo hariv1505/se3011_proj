@@ -3,8 +3,8 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
-import java.util.regex.Pattern;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -177,9 +177,16 @@ public class GUI {
 
 	}
 
-	public static boolean isValidName(String text) {
-		Pattern pattern = Pattern.compile("[^/./\\:*?\"<>|]");
-		return !pattern.matcher(text).find() && (text.length() > 0);
+	public static boolean isValidName(String text)
+	{
+	    try
+	    {
+	        File file = new File(text);
+	        file.createNewFile();
+	        if(file.exists()) file.delete();
+	        return true;
+	    }
+	    catch(Exception ex){}
+	    return false;
 	}
-
 }

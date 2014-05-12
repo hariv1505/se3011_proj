@@ -1,0 +1,17 @@
+Starting time at 2014-05-12 14:21:19 +1000
+PARAMETERS ARE: n = 3, TH = 0.0, input = C:\Users\Hari\Dropbox\SENG3011_proj\bhp5Feb13.csv, output = newEs.cees
+
+Number of total records: 100226
+Number of total TRADES: 16485
+
+Prices gathered.
+Returns gathered.
+
+SMAs gathered.
+
+3532 ENTER transactions gathered.
+
+File created - see 'newEs.cees'
+
+Ending time at 2014-05-12 14:21:27 +1000
+Total time was 8.268571 seconds.
