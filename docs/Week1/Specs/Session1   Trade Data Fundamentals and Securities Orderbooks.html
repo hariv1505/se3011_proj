@@ -1,0 +1,3123 @@
+
+<!-- saved from url=(0130)http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/editdata.mso">
+<link rel="OLE-Object-Data" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Session1 : Trade Data Fundamentals and Securities Orderbooks</title>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script><style type="text/css"></style></head><body lang="EN-AU" link="blue" vlink="purple" style="tab-interval:36.0pt" screen_capture_injected="true"><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="time">
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="stockticker">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Adnan Rashid</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Fethi</o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>19</o:TotalTime>
+  <o:LastPrinted>2011-05-18T02:58:00Z</o:LastPrinted>
+  <o:Created>2012-02-24T05:29:00Z</o:Created>
+  <o:LastSaved>2012-05-06T08:34:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1920</o:Words>
+  <o:Characters>10944</o:Characters>
+  <o:Company>Adaptive Business Solutions</o:Company>
+  <o:Lines>91</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>12839</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel="dataStoreItem" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/item0014.xml" target="Revised%20introOrderbook-1-3_files/props0015.xml">
+<link rel="themeData" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cse.unsw.edu.au/~fethir/TradingEngineCourse/Session1/section%201%20links%20and%20topic/Revised%20introOrderbook-1-3_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-AU</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-alt:"Courier New";
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Trebuchet MS","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-style:italic;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Footnote Text Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Trebuchet MS","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Comment Text Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Trebuchet MS","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	vertical-align:super;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:18.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"Comment Text";
+	mso-style-link:"Comment Subject Char";
+	mso-style-next:"Comment Text";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Trebuchet MS","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+span.FootnoteTextChar
+	{mso-style-name:"Footnote Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Footnote Text";}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Comment Text";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:Title;
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Comment Text Char";
+	mso-style-link:"Comment Subject";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Revised%20introOrderbook-1-3_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Revised%20introOrderbook-1-3_files/header.htm") fcs;
+	mso-endnote-separator:url("Revised%20introOrderbook-1-3_files/header.htm") es;
+	mso-endnote-continuation-separator:url("Revised%20introOrderbook-1-3_files/header.htm") ecs;}
+@page WordSection1
+	{size:21.0cm 841.95pt;
+	margin:72.0pt 54.0pt 72.0pt 54.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:268779309;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-326725784 201916431 201916441 201916443 201916431 201916441 201916443 201916431 201916441 201916443;}
+@list l0:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1
+	{mso-list-id:466630332;
+	mso-list-type:hybrid;
+	mso-list-template-ids:792115192 201916417 201916419 201916421 201916417 201916419 201916421 201916417 201916419 201916421;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1168784857;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-303297064 201916417 201916419 201916421 201916417 201916419 201916421 201916417 201916419 201916421;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:1264218504;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2058672136 201916417 201916419 201916421 201916417 201916419 201916421 201916417 201916419 201916421;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:1346244205;
+	mso-list-type:hybrid;
+	mso-list-template-ids:727588208 201916417 201916419 201916421 201916417 201916419 201916421 201916417 201916419 201916421;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l4:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l4:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l4:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l4:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l4:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:2121029973;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1015134942 201916417 201916419 201916421 201916417 201916419 201916421 201916417 201916419 201916421;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+
+
+
+<div class="WordSection1">
+
+<p class="MsoTitle"><span lang="EN-US">Session1: Trade Data Fundamentals and
+Securities <span class="SpellE">Orderbooks</span></span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">6
+May 2012</span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">The aim of this session is to learn about
+the elementary data types used by a trading engine. It focuses on a core
+component of any trading engine that is the order book. </span></p>
+
+<h1><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Basic Assumptions<o:p></o:p></span></h1>
+
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal" style="mso-list:l3 level1 lfo1"><span lang="EN-US">Students
+     need to be familiar with the general concept of an electronic market, its
+     participants and the way they interact with the market through
+     transactions.</span></li>
+ <li class="MsoNormal" style="mso-list:l3 level1 lfo1"><span lang="EN-US">Although
+     an electronic market is about buying and selling anything, we will be
+     mainly addressing the buying and selling of financial securities. Students
+     need to have some notions of what is a security in general and in an
+     equity(or stock) in particular since we will be focusing on equities (or
+     stock) markets. Many of the concepts explained here can be adapted to
+     other products.</span></li>
+ <li class="MsoNormal" style="mso-list:l3 level1 lfo1"><span lang="EN-US">The
+     computer system that implements the markets rules is called the trading
+     engine. Transactions are submitted to the trading engine through some kind
+     of communication network. We call these transactions input transactions.
+     In turn, the trading engine generates transactions called output
+     transactions.</span></li>
+ <li class="MsoNormal" style="mso-list:l3 level1 lfo1"><span lang="EN-US">In the
+     practical exercises, the tools associated with most sessions use the
+     concept of <st1:stockticker w:st="on">CSV</st1:stockticker> files to avoid
+     having to consider a communication network. <st1:stockticker w:st="on">CSV</st1:stockticker>
+     files will be used to represent list of transactions that are either
+     submitted to the trading engine (input <st1:stockticker w:st="on">CSV</st1:stockticker>
+     files) or produced by the trading engine (output <st1:stockticker w:st="on">CSV</st1:stockticker>
+     files). In general, <st1:stockticker w:st="on">CSV</st1:stockticker> files
+     store comma-separated values where the values of one transaction (e.g. trading
+     order) are entered in one line and separated from the next transaction by
+     the newline character. </span></li>
+ <li class="MsoNormal" style="mso-list:l3 level1 lfo1"><st1:stockticker w:st="on"><span lang="EN-US">CSV</span></st1:stockticker><span lang="EN-US"> files can simply
+     be generated using MS Excel worksheet and then using “<span class="GramE">save</span>
+     as” option and selecting “Comma delimited” option. Alternatively, any simple
+     editor can be used as Notepad or Vim (<u>Warning</u>: in some cases Excel
+     changes the original data so you need to be careful when handling certain
+     data types like dates and very long integers).</span></li>
+</ul>
+
+<h1><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Introduction
+to trading data<o:p></o:p></span></h1>
+
+<p class="MsoNormal"><span lang="EN-US">The term “trading data” is used to describe
+three fundamental transactions types.</span></p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal" style="mso-list:l4 level1 lfo2"><span lang="EN-US">Order
+     processing: correspond to requests from the market participants (i.e.
+     brokers) regarding the <i style="mso-bidi-font-style:normal">buying and
+     selling of securities. Such transactions can correspond to submitting an
+     order (i.e. bid or</i> ask), amending existing orders, or deleting
+     existing orders. This is the main focus of this session.</span></li>
+ <li class="MsoNormal" style="mso-list:l4 level1 lfo2"><span lang="EN-US">Trades:
+     such transactions are typically generated by the trading engine once some
+     orders have been matched with each other. They indicate details such as
+     the volume of the trade and the prices. Trades will be the subject of
+     Session 2.</span></li>
+ <li class="MsoNormal" style="mso-list:l4 level1 lfo2"><span lang="EN-US">Market
+     events: represent particular events such as the opening/closing of the
+     market and moving between different market phases. Such transactions are
+     usually called control transactions.</span></li>
+</ul>
+
+<p class="MsoNormal"><span lang="EN-US">Different systems that participate in an
+electronic market use different methods for formatting and storing the trading
+data. This session will use the format used by <a href="http://www.sirca.org.au/"><span class="SpellE">Sirca</span></a>, the main
+provider of financial market data to Universities in Australia and New Zealand.
+Starting from a basic format, this will be extended with more fields in future
+sessions. The main purpose here is to illustrate the construction and
+management of an order book for each security based on the input transactions.</span></p>
+
+<h1><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Activity
+1<o:p></o:p></span></h1>
+
+<h2><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Description
+of order transactions <o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span lang="EN-US">Order data is stored in a <st1:stockticker w:st="on">CSV</st1:stockticker> file. Each row basically corresponds to one
+transaction and each column corresponds to the attribute of the transaction.
+Here is the description of all different attributes of an order transaction
+that will be used in this session:</span></p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="648" style="width:486.35pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="66" valign="top" style="width:49.65pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Instrument<o:p></o:p></span></b></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Date<o:p></o:p></span></b></p>
+  </td>
+  <td width="54" valign="top" style="width:40.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Time<o:p></o:p></span></b></p>
+  </td>
+  <td width="69" valign="top" style="width:51.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Record Type<o:p></o:p></span></b></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Price<o:p></o:p></span></b></p>
+  </td>
+  <td width="58" valign="top" style="width:43.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Volume<o:p></o:p></span></b></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Value<o:p></o:p></span></b></p>
+  </td>
+  <td width="65" valign="top" style="width:48.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Trans ID<o:p></o:p></span></b></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Bid ID<o:p></o:p></span></b></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Ask ID<o:p></o:p></span></b></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><b><span lang="EN-US" style="font-size:8.0pt">Bid/Ask<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="66" valign="top" style="width:49.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">Security <o:p></o:p></span></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">Date of the order<o:p></o:p></span></p>
+  </td>
+  <td width="54" valign="top" style="width:40.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">Time of the order<o:p></o:p></span></p>
+  </td>
+  <td width="69" valign="top" style="width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">Order status
+  i.e.<span style="mso-spacerun:yes">&nbsp; </span>Enter, Amend, Delete<o:p></o:p></span></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">The Price<o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">The Volume<o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">The Value<o:p></o:p></span></p>
+  </td>
+  <td width="65" valign="top" style="width:48.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">Transaction ID<o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">The Bid ID<o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">The Ask ID<o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">A - Ask<o:p></o:p></span></p>
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:8.0pt">B - Bid</span><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
+  <td width="66" valign="top" style="width:49.65pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">String<o:p></o:p></span></i></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Date<br>
+  YYYYMMDD<o:p></o:p></span></i></p>
+  </td>
+  <td width="54" valign="top" style="width:40.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Time
+  HH:MM:SS[.MMM]<o:p></o:p></span></i></p>
+  </td>
+  <td width="69" valign="top" style="width:51.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">String<o:p></o:p></span></i></p>
+  </td>
+  <td width="54" valign="top" style="width:40.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Double<o:p></o:p></span></i></p>
+  </td>
+  <td width="58" valign="top" style="width:43.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Double</span></i><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Double</span></i><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="65" valign="top" style="width:48.6pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Long <span class="SpellE">Int</span></span></i><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Long <span class="SpellE">Int</span></span></i><span lang="EN-US" style="font-size:8.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">Long <span class="SpellE">Int</span></span></i><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="57" valign="top" style="width:42.9pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><i><span lang="EN-US" style="font-size:8.0pt">String<o:p></o:p></span></i></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:10.0pt">Table 1: Initial attributes in input transactions<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">The attributes are always listed in the
+first line of the file so they may appear in different columns. More attributes
+will be introduced in later sessions.</span><span lang="EN-US" style="font-size:
+12.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">The attribute “Record Type” can be one of
+the following:</span></p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal" style="mso-list:l5 level1 lfo3"><b><span lang="EN-US">“Enter”<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>:<span style="mso-spacerun:yes">&nbsp;
+     </span></span></b><span lang="EN-US" style="mso-bidi-font-weight:bold">the
+     order is being submitted from the dealer to the trading engine. The
+     attribute “Bid/Ask” will specify whether it is a bid (“B”) or ask (“A”)<b><o:p></o:p></b></span></li>
+ <li class="MsoNormal" style="mso-list:l5 level1 lfo3"><b><span lang="EN-US">“Amend”
+     :<span style="mso-spacerun:yes">&nbsp; </span></span></b><span lang="EN-US" style="mso-bidi-font-weight:bold">the dealer wishes to amend a previously
+     made order<b><o:p></o:p></b></span></li>
+ <li class="MsoNormal" style="mso-list:l5 level1 lfo3"><b><span lang="EN-US">“Delete”<span style="mso-spacerun:yes">&nbsp; </span>: </span></b><span lang="EN-US" style="mso-bidi-font-weight:bold">the dealer wishes to cancel a previously
+     made order</span><span class="MsoHyperlink"><span lang="EN-US" style="color:windowtext;text-decoration:none;text-underline:none"><o:p></o:p></span></span></li>
+</ul>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">#<span class="SpellE">Instrument,Date,Time,Record</span>
+<span class="SpellE">Type,Price,Volume,Value,Trans</span> <span class="SpellE">ID,Bid</span>
+<span class="SpellE">ID,Ask</span> <span class="SpellE">ID,Bid</span>/Ask<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:00:00,ENTER,45,5000,225000,5044,432356253461069000,,B<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:11:08,ENTER,54,197,10638,5044,,8890248881250480000,A<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:17:04,ENTER,51.5,250,12875,5044,,6572914060944080000,A<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:18:07,ENTER,49.75,101,5024.75,5044,,2420623594072300000,A<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:27:01,ENTER,45.83,190,8707.7,5044,3848629713164480000,,B<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier">MQG,20100401,00:34:02,ENTER,49.99,290,14497.1,5044,,5065228636431650000,A<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US" style="font-size:9.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt"><span lang="EN-US">For example the first transaction corresponds to the following
+order:</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="mso-list:l0 level1 lfo4;tab-stops:list 36.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Order <o:p></o:p></span></li>
+ <ol style="margin-top:0cm" start="1" type="a">
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Instrument
+      = MQG (Macquarie Group)<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Date =
+      01-Apr-2010<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Time =
+      00:00:00<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Record Type
+      = Enter<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Price = 45<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Volume
+      =5000<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Value =
+      225000<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span class="SpellE"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:
+      bold">TransID</span></span><span lang="EN-US" style="font-size:10.0pt;
+      mso-bidi-font-weight:bold"> = 5044<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Bid ID = </span><span lang="EN-US" style="font-size:10.0pt">432356253461069943<span style="mso-bidi-font-weight:bold"><o:p></o:p></span></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Ask ID =<o:p></o:p></span></li>
+  <li class="MsoNormal" style="mso-list:l0 level2 lfo4;tab-stops:list 72.0pt"><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-weight:bold">Bid/Ask = B<o:p></o:p></span></li>
+ </ol>
+</ol>
+
+<p class="MsoNormal"><span lang="EN-US">The above CSV file can be created or edited
+using MS Excel as shown in fig 1.</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US" style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-bidi-font-weight:
+bold"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:492.75pt;
+ height:285pt' o:ole="">
+ <v:imagedata src="Revised%20introOrderbook-1-3_files/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="657" height="380" src="./Session1   Trade Data Fundamentals and Securities Orderbooks_files/image002.jpg" v:shapes="_x0000_i1025"><!--[endif]--><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="PBrush" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1397834417">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:10.0pt">Figure 1: A Sample of Orders Data</span></b><b><span lang="EN-US" style="font-size:8.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:108.0pt;text-indent:36.0pt"><u><span lang="EN-US" style="color:blue"><o:p><span style="text-decoration:none">&nbsp;</span></o:p></span></u></p>
+
+<h1><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Activity
+2<o:p></o:p></span></h1>
+
+<h2><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Description
+of the <span class="SpellE">orderbook</span> content<o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span lang="EN-US">An order book is a core component in any
+trading engine. It is a data structure that stores the input transactions. It
+maintains two separate lists of orders for each security that are the bid list
+(contains “buy” orders) and ask list (contains “sell” orders). There is always
+one order book per security.</span></p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo5"><span lang="EN-US">Bid list
+     is sorted according to price/time criteria where the earliest highest price
+     is at the top of bid list (normally called best bid).</span></li>
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo5"><span lang="EN-US">Ask list
+     is sorted according to price/time criteria where the earliest lowest price
+     is at the top of the ask list (normally called best ask)</span></li>
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo5"><span lang="EN-US">The
+     difference in price between the best bid and best ask at a particular time
+     is called the spread.</span></li>
+ <li class="MsoNormal" style="mso-list:l1 level1 lfo5"><span lang="EN-US">Naturally,
+     more than one order in either bid or ask list can have the same price but
+     for different brokers (i.e. clients). The term price step is used to
+     denote the minimum difference in price between two groups of same price
+     orders. The price can be as low as 1c and can increase for higher value
+     securities.</span></li>
+</ul>
+
+<p class="MsoNormal"><span lang="EN-US">The <span class="SpellE">orderbook</span> is
+updated <span class="SpellE">everytime</span> an order is processed by the
+trading engine. Therefore, it is a dynamic data structure which is changing all
+the time. Figure 2 illustrates different cases of building an <span class="SpellE">orderbook</span>.</span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:EN-AU;mso-fareast-language:
+EN-AU;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75"
+ alt="CSE - Orderbook1.jpg" style='width:595.5pt;height:590.25pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Revised%20introOrderbook-1-3_files/image003.jpg" o:title="CSE - Orderbook1"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="794" height="787" src="./Session1   Trade Data Fundamentals and Securities Orderbooks_files/image004.jpg" alt="CSE - Orderbook1.jpg" v:shapes="_x0000_i1028"><!--[endif]--></span></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="font-size:10.0pt">Figure 2: Example of building
+an <span class="SpellE">orderbook</span> through a succession of ENTER
+transactions<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">Another example is the <span class="SpellE">orderbook</span>
+resulting from the sample of data shown in Figure 1:</span></p>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="332" colspan="4" valign="top" style="width:249.0pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Bids</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="332" colspan="4" valign="top" style="width:249.15pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span lang="EN-US">Asks</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="83" valign="top" style="width:62.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">ID<o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">ID<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="83" valign="top" style="width:62.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="27" w:st="on"><span lang="EN-US">00:27:01</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">45.830</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">190</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">3848629713164480000<o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="18" w:st="on"><span lang="EN-US">00:18:07</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">49.750</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">101</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">2420623594072300000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="83" valign="top" style="width:62.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="0" w:st="on"><span lang="EN-US">00:00:00</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">45</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">5000</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">432356253461069000<o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="34" w:st="on"><span lang="EN-US">00:34:02</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">49.990</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">290</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">5065228636431650000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4">
+  <td width="83" valign="top" style="width:62.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="17" w:st="on"><span lang="EN-US">00:17:04</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">51.5</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">250</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">6572914060944080000<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+  <td width="83" valign="top" style="width:62.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.25pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><st1:time hour="0" minute="11" w:st="on"><span lang="EN-US">00:11:08</span></st1:time><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">54</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US">197</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+  </td>
+  <td width="83" valign="top" style="width:62.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt">8890248881250480000<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="font-size:10.0pt">Table 2: Content of the <span class="SpellE">orderbook</span> when all orders have been processed<o:p></o:p></span></b></p>
+
+<h2><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Representing
+<span class="SpellE">orderbooks</span> using market depth transactions<o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span lang="EN-US">To observe the content of the <span class="SpellE">orderbook</span>, trading engines must output a special type of
+transaction called <i style="mso-bidi-font-style:normal">Market Depth</i>
+transaction. Each transaction represents a snapshot of the <span class="SpellE">orderbook</span>
+within a specific depth (e.g. top 4 best bids/asks). </span><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:10.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">This <span class="SpellE">orderbook</span>
+can be represented in a textual form by displaying the market depth at any
+point in time as one transaction stored in one CSV line. The market depth file
+only shows the total quantity at any given price so if there are many orders
+with the same price, only the total quantity is displayed. </span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:11.0pt">The
+transaction record that corresponds to the <span class="SpellE">orderbook</span>
+shown in Table 2 is as follows:<span style="mso-bidi-font-weight:bold"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier;
+mso-bidi-font-weight:bold">#<span class="SpellE">Instrument,Date,Time,Record</span>
+Type,L1-Bid Price,L1-Bid Volume,L1-Number of Buyers,L1-Ask Price,L1-Ask
+Volume,L1-Number of Sellers,L2-Bid Price,L2-Bid Volume,L2-Number of
+Buyers,L2-Ask Price,L2-Ask Volume,L2-Number of Sellers,L3-Bid Price,L3-Bid
+Volume,L3-Number of Buyers,L3-Ask Price,L3-Ask Volume,L3-Number of
+Sellers,L4-Bid Price,L4-Bid Volume,L4-Number of Buyers,L4-Ask Price,L4-Ask
+Volume,L4-Number of Sellers<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:9.0pt;font-family:Courier;
+mso-bidi-font-weight:bold">MQG,20100401,00:34:02,Market
+Depth,45.83,190,1,49.75,101,1,45,5000,1,49.99,290,1, , , ,51.5,250,1, , ,
+,54,197,1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">This transaction shows an <span class="SpellE">orderbook</span> of depth 4. The format could show an <span class="SpellE">orderbook</span> of any depth.</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<h1><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Activity
+3<o:p></o:p></span></h1>
+
+<h2><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Operations
+on the <span class="SpellE">orderbook</span><o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span lang="EN-US">The <span class="SpellE">orderbook</span> can
+be manipulated using the following operations:</span></p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li class="MsoNormal" style="mso-list:l2 level1 lfo6"><b><span lang="EN-US">Submit
+     order (“ENTER”)</span></b><span lang="EN-US">: inserts an order of a
+     particular security in the Bid list or Ask list of the corresponding <span class="SpellE">orderbook</span>. The inserted order is placed in the list
+     based price/time time priority.</span></li>
+ <li class="MsoNormal" style="mso-list:l2 level1 lfo6"><b><span lang="EN-US">Delete
+     order (“DELETE”)</span></b><span lang="EN-US">: uses an existing order’s
+     transaction id to locate this order in either bid or ask list of the
+     corresponding <span class="SpellE">orderbook</span> and then removes it from
+     that list.</span></li>
+ <li class="MsoNormal" style="mso-list:l2 level1 lfo6"><b><span lang="EN-US">Amend
+     order (“AMEND”)</span></b><span lang="EN-US">: amends one or several
+     attributes of an existing order. There are different rules associated with
+     amending an order. In this session, we use <st1:stockticker w:st="on">ASX</st1:stockticker>
+     rules in which only the volume or the price of an order can be amended as
+     follows:</span></li>
+ <ul style="margin-top:0cm" type="circle">
+  <li class="MsoNormal" style="mso-list:l2 level2 lfo6"><b><span lang="EN-US">Decrease
+      volume</span></b><span lang="EN-US">: given the order id, the particular
+      order is located in either bid or ask list of the corresponding <span class="SpellE">orderbook</span> and then its volume attribute is amended
+      with the new value. The amend volume does not affect the queuing position
+      of the order.</span></li>
+  <li class="MsoNormal" style="mso-list:l2 level2 lfo6"><b><span lang="EN-US">Increase
+      volume or Amend price</span></b><span lang="EN-US">: similar to deleting an
+      order and inserting a new order with a new time stamp but with a similar
+      id.</span></li>
+ </ul>
+</ul>
+
+<p class="MsoNormal"><span lang="EN-US">The following examples highlight the
+changes made on the <span class="SpellE">orderbook</span> due to the above manipulations:</span></p>
+
+<h3><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Example
+1: Amend Order - Increase Volume or Change Price</span><span class="MsoHyperlink"><i style="mso-bidi-font-style:normal"><span lang="EN-US" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></i></span></h3>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:11.0pt">Suppose
+an <span class="SpellE">orderbook</span> with the orders as shown in Table 3.<o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="685" style="width:513.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width="305" colspan="4" valign="top" style="width:228.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Bids</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+  <td width="297" colspan="4" valign="top" style="width:222.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Asks</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Instrument</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">Bid ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">MGG</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:01</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">45.830</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">190</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">3848629713164480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:07</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">49.750</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">101</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">2420623594072300000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">MQG</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">00:00:07</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">45</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">5000</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">432356253461069000</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:9.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:04</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">51.5</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">250</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">6572914060944080000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">MQG</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:10</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">45</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">50</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">832356454561069000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:08</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">54</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">197</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">8890248881250480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal" align="center" style="margin-left:108.0pt;text-align:center;
+text-indent:36.0pt"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:10.0pt">Table 3: Example of an <span class="SpellE">orderbook</span></span></b><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">Amending the bid order </span><span lang="EN-US" style="font-size:9.0pt;color:black">432356253461069000</span><span lang="EN-US"> by adding 400 to the volume is achieved with an order similar to
+the original order in which the <span class="SpellE">RecordType</span> is changed
+from ENTER </span><span lang="EN-US" style="font-family:Wingdings;mso-ascii-font-family:
+&quot;Trebuchet MS&quot;;mso-hansi-font-family:&quot;Trebuchet MS&quot;;mso-char-type:symbol;
+mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:
+Wingdings">à</span></span><span lang="EN-US"> AMEND:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:10.0pt;font-family:Courier">MQG,20100401,00:00:20,AMEND,45,5400,243000,6111,432356253461069000,,B<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">The effect is that the existing bid is
+removed and reinserted into the <span class="SpellE">orderbook</span> and
+therefore loses its place in the queue with bids having the same price. The
+resulting <span class="SpellE">orderbook</span> is shown in Table 4.</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="685" style="width:513.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width="305" colspan="4" valign="top" style="width:228.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Bids</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+  <td width="297" colspan="4" valign="top" style="width:222.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Asks</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Instrument</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">Bid ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">MGG</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:01</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">45.830</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">190</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">3848629713164480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:07</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">49.750</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><span lang="EN-US">101</span><span lang="EN-US" style="font-size:12.0pt;line-height:
+  115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">2420623594072300000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">MQG</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:10</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">45</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">50</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">832356454561069000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:04</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">51.5</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">250</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">6572914060944080000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">MQG</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">00:00:20</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">45</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">5400</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">432356253461069000</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:9.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:08</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">54</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">197</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">8890248881250480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="font-size:10.0pt">Table 4: Content of the <span class="SpellE">orderbook</span> after the volume was increased<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">Similarly, any amending to the price will
+result in the corresponding order being at the bottom of the queue with orders
+having similar prices.</span></p>
+
+<h3><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Example
+2: Amend Order - Decrease Volume</span><span class="MsoHyperlink"><i style="mso-bidi-font-style:normal"><span lang="EN-US" style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></i></span></h3>
+
+<p class="MsoNormal"><span lang="EN-US">Suppose that instead of increasing the
+volume, the bid order </span><span lang="EN-US" style="font-size:9.0pt;
+color:black">432356253461069000</span><span lang="EN-US"> has 400 reduced from
+its volume. The corresponding transaction would be:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:10.0pt;font-family:Courier">MQG,20100401,00:00:20,AMEND,45,4600,207000,6111,432356253461069000,,B<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">The effect is that the existing bid is
+changed but does not lose its place in the queue with bids having the same
+price. The resulting <span class="SpellE">orderbook</span> is shown in Table 5.</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="687" style="width:514.9pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width="306" colspan="4" valign="top" style="width:229.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Bids</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+  <td width="297" colspan="4" valign="top" style="width:222.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Asks</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Instrument</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="73" valign="top" style="width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">Bid ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">MGG</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="73" valign="top" style="width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:01</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">45.830</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">190</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">3848629713164480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:07</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">49.750</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">101</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">2420623594072300000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">MQG</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="73" valign="top" style="width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">00:00:07</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">45</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="color:black">4600</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><b style="mso-bidi-font-weight:
+  normal"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">432356253461069000</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:9.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></b></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:04</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">51.5</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">250</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">6572914060944080000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">MQG</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="73" valign="top" style="width:54.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:10</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">45</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">50</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">832356454561069000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:08</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">54</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">197</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">8890248881250480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US" style="font-size:10.0pt">Table 5: Content of the <span class="SpellE">orderbook</span> after the volume was decreased<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">Figure 3 illustrates both cases of amend
+with a different example.</span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:EN-AU;mso-fareast-language:
+EN-AU;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Picture_x0020_0"
+ o:spid="_x0000_i1027" type="#_x0000_t75" alt="CSE - Orderbook amend.jpg"
+ style='width:595.5pt;height:483.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Revised%20introOrderbook-1-3_files/image006.jpg" o:title="CSE - Orderbook amend"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="794" height="645" src="./Session1   Trade Data Fundamentals and Securities Orderbooks_files/image008.jpg" alt="CSE - Orderbook amend.jpg" v:shapes="Picture_x0020_0"><!--[endif]--></span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<h2 align="center" style="text-align:center"><span lang="EN-US" style="font-size:
+10.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;font-style:normal;mso-bidi-font-style:
+italic">Figure 3: Examples of amending an <span class="SpellE">orderbook</span><o:p></o:p></span></h2>
+
+<h3><span lang="EN-US" style="mso-fareast-font-family:&quot;Times New Roman&quot;">Example
+3: Delete an order</span><span class="MsoHyperlink"><i style="mso-bidi-font-style:
+normal"><span lang="EN-US" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;font-weight:normal;mso-bidi-font-weight:
+bold"><o:p></o:p></span></i></span></h3>
+
+<p class="MsoNormal"><span lang="EN-US">Deleting an order is achieved with a
+transaction having <span class="SpellE">RecordType</span> equal to “DELETE” and
+quoting the original bid or ask order ID. For example:</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-size:10.0pt;font-family:Courier">MQG<span class="GramE">,20100401,00:11:59,DELETE</span>,,,,7890,,8890248881250480000,A<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US">When applied to the <span class="SpellE">orderbook</span>
+in Table 3, the resulting <span class="SpellE">orderbook</span> is shown in Table
+6. </span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="685" style="width:513.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td width="305" colspan="4" valign="top" style="width:228.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Bids</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+  <td width="297" colspan="4" valign="top" style="width:222.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;line-height:115%"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Asks</span></b><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Instrument</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">Bid ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Time</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Price</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">Qty</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">ID</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">MGG</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:01</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">45.830</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">190</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">3848629713164480000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">00:00:07</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">49.750</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US">101</span><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%">2420623594072300000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">MQG</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:07</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">45</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">5000</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">432356253461069000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:04</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">51.5</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">250</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">6572914060944080000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
+  <td width="84" valign="top" style="width:62.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">MQG</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">00:00:10</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">45</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="46" valign="top" style="width:34.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="color:black">50</span><span lang="EN-US" style="font-size:12.0pt;
+  line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;color:black">832356454561069000</span><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+  color:black"><o:p></o:p></span></p>
+  </td>
+  <td width="71" valign="top" style="width:53.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="58" valign="top" style="width:43.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="38" valign="top" style="width:28.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="128" valign="top" style="width:96.3pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="line-height:115%"><span lang="EN-US" style="font-size:9.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal" align="center" style="margin-left:108.0pt;text-align:center;
+text-indent:36.0pt"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:10.0pt">Table 6: Example of an order deletion</span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US">Figure 4 illustrates a case of deleting an
+order.</span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:EN-AU;mso-fareast-language:
+EN-AU;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="Picture_x0020_1"
+ o:spid="_x0000_i1026" type="#_x0000_t75" alt="CSE - Orderbook delete.jpg"
+ style='width:595.5pt;height:236.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Revised%20introOrderbook-1-3_files/image009.jpg" o:title="CSE - Orderbook delete"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="794" height="315" src="./Session1   Trade Data Fundamentals and Securities Orderbooks_files/image010.jpg" alt="CSE - Orderbook delete.jpg" v:shapes="Picture_x0020_1"><!--[endif]--></span></p>
+
+<h2 align="center" style="text-align:center"><span lang="EN-US" style="font-size:
+10.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;font-style:normal;mso-bidi-font-style:
+italic">Figure 4: Example of deleting an <span class="SpellE">orderbook</span><o:p></o:p></span></h2>
+
+<p class="MsoNormal"><span lang="EN-US"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</o:smarttagtype></o:smarttagtype></body></html>
