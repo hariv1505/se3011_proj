@@ -1,3 +1,4 @@
+package sengrr;
 import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,23 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.awt.GridBagLayout;
+import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import java.awt.GridBagConstraints;
+import java.awt.Font;
+import java.awt.Insets;
+import javax.swing.JTextArea;
+import java.awt.Color;
+import javax.swing.JInternalFrame;
+import javax.swing.JSplitPane;
+import javax.swing.SwingConstants;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import java.awt.CardLayout;
+import java.awt.FlowLayout;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.JTextPane;
 
 public class GUI {
 	static JTextField thField;
@@ -19,6 +37,9 @@ public class GUI {
 	static JTextField outField;
 	static String modulePath;
 	static String filePath;
+	private static JTextField txtEnterNHere;
+	private static JTextField txtThreshold;
+	private static JTextField txtOut;
 
 	private static class HelloWorldDisplay extends JPanel {
 
@@ -30,9 +51,9 @@ public class GUI {
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			// g.drawString( "Hello World!", 20, 30 );
-			g.drawString("N = ", 20, 50);
-			g.drawString("TH = ", 20, 85);
-			g.drawString("Out = ", 20, 120);
+			//g.drawString("N = ", 20, 50);
+			//g.drawString("TH = ", 20, 85);
+			//g.drawString("Out = ", 20, 120);
 			nField = new JTextField();
 			thField = new JTextField(0);
 			outField = new JTextField();
@@ -47,133 +68,89 @@ public class GUI {
 		}
 	}
 
-	private static class FileHandler implements ActionListener {
-		public void actionPerformed(ActionEvent arg0) {
-			JFileChooser openFile = new JFileChooser();
-			openFile.showOpenDialog(null);
-			filePath = openFile.getSelectedFile().getAbsolutePath();
-			System.out.println(openFile.getSelectedFile().getAbsolutePath());
-		}
-	}
-
-	private static class ModuleHandler implements ActionListener {
-		public void actionPerformed(ActionEvent arg0) {
-			JFileChooser openFile = new JFileChooser();
-			openFile.showOpenDialog(null);
-			modulePath = openFile.getSelectedFile().getAbsolutePath();
-			System.out.println(openFile.getSelectedFile().getAbsolutePath());
-		}
-	}
-
-	private static class ButtonHandler implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			String nVal = nField.getText();
-			String thVal = thField.getText();
-			String outVal = outField.getText();
-			System.out.println(nVal + " " + thVal + " " + outVal);
-
-			if (modulePath == null || modulePath.equals("")) {
-				modulePath = "msm_v_1_2.exe";	
-			}
-
-			if (filePath == null || filePath.matches("")) {
-				JOptionPane.showMessageDialog(null,
-						"Please provide input file.");
-				return;
-			}
-
-			String s = modulePath + " " + "-i '" + filePath + "'";
-			
-			if (nVal != null && !nVal.equals("")) {
-				System.out.println(nVal);
-				try {
-					Integer.parseInt(nVal);
-					s += " -w " + nVal;
-				} catch (NumberFormatException ex) {
-					JOptionPane.showMessageDialog(null, "Invalid window size.");
-					ex.printStackTrace();
-					return;
-				}
-			}
-
-			if (thVal != null && !thVal.equals("")) {
-				try {
-					Double.parseDouble(thVal);
-					s += " -th " + thVal;
-				} catch (NumberFormatException ex) {
-					JOptionPane.showMessageDialog(null, "Invalid threshold size.");
-					ex.printStackTrace();
-					return;
-				}
-			}
-
-			if (outVal != null && !outVal.equals("")) {
-				if (isValidName(outVal)) {
-					s += " -o " + outVal;
-				} else {
-					JOptionPane.showMessageDialog(null,
-							"Invalid output file name");
-					return;
-				}
-			}
-
-			// String
-			// outputPath=gui2.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-			// String s = modulePath+" " +"-i "+ filePath + " -w "+ nVal +" -o "
-			// + outputPath + "-th " + thVal;
-			// String s="ping www.google.com.au";
-			System.out.println(s);
-
-			Process p;
-
-			try {
-				p = Runtime.getRuntime().exec(s);
-				p.waitFor();
-				BufferedReader reader = new BufferedReader(
-						new InputStreamReader(p.getInputStream()));
-
-				System.out.println(reader.readLine());
-				String line = "";
-				StringBuffer output = new StringBuffer();
-				while ((line = reader.readLine()) != null) {
-					output.append(line + "\n");
-				}
-				System.out.println(output.toString());
-			} catch (Exception e1) {
-				System.err.println("Could not open " + modulePath);
-				e1.printStackTrace();
-			}
-
-			System.exit(0);
-		}
-	}
-
 	public static void main(String[] args) {
 
-		HelloWorldDisplay displayPanel = new HelloWorldDisplay();
-		JButton okButton = new JButton("Run Application");
-		JButton ModuleButton = new JButton("Choose Your Module");
-		JButton fileButton = new JButton("Choose Your file");
-		ButtonHandler listener = new ButtonHandler();
-		ModuleHandler Modulelistener = new ModuleHandler();
-		FileHandler filelistener = new FileHandler();
-		okButton.addActionListener(listener);
-		ModuleButton.addActionListener(Modulelistener);
-		fileButton.addActionListener(filelistener);
-
 		JPanel content = new JPanel();
-		content.setLayout(new BorderLayout());
-		content.add(displayPanel, BorderLayout.CENTER);
-		content.add(ModuleButton, BorderLayout.NORTH);
-		content.add(okButton, BorderLayout.SOUTH);
-		content.add(fileButton, BorderLayout.AFTER_LINE_ENDS);
+		content.setBackground(new Color(0, 191, 255));
 
-		JFrame window = new JFrame("GUI for MSM Module");
+		JFrame window = new JFrame("MSM Module");
+		window.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		window.setContentPane(content);
+		content.setLayout(new MigLayout("", "[299px,grow][grow][5px][1px][4px][1px][4px][9px]", "[66px][29px][16px][][29.00][][grow][]"));
+		
+		JTextArea txtrWelcomeToThe = new JTextArea();
+		txtrWelcomeToThe.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		txtrWelcomeToThe.setForeground(new Color(220, 20, 60));
+		txtrWelcomeToThe.setBackground(new Color(0, 191, 255));
+		txtrWelcomeToThe.setText("   Welcome to the MSM Module Gui \n  Firstly, select the module you would\nlike to use by clicking the button below");
+		content.add(txtrWelcomeToThe, "cell 0 0,alignx center,aligny center");
+		
+		JLabel label_1 = new JLabel("");
+		content.add(label_1, "cell 3 0,alignx left,aligny center");
+		
+		JLabel label_2 = new JLabel("");
+		content.add(label_2, "cell 5 0,alignx left,aligny center");
+		
+		JLabel label_3 = new JLabel("");
+		content.add(label_3, "cell 7 0,alignx left,aligny center");
+		
+		JButton ModuleButton = new JButton("Choose Your Module");
+		ModuleButton.setForeground(new Color(218, 165, 32));
+		ModuleButton.setBackground(new Color(0, 206, 209));
+		ModuleButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		content.add(ModuleButton, "cell 0 1,alignx center,aligny top");
+		
+		JTextArea txtrNowPleaseEnter = new JTextArea();
+		txtrNowPleaseEnter.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		txtrNowPleaseEnter.setForeground(new Color(220, 20, 60));
+		txtrNowPleaseEnter.setBackground(new Color(0, 191, 255));
+		txtrNowPleaseEnter.setText("Now please enter the N value, and Threshold Value:");
+		content.add(txtrNowPleaseEnter, "cell 0 2 8 1,alignx left,aligny top");
+		
+		txtEnterNHere = new JTextField();
+		txtEnterNHere.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		txtEnterNHere.setText("       N");
+		content.add(txtEnterNHere, "flowx,cell 0 3,alignx left");
+		txtEnterNHere.setColumns(10);
+		
+		txtThreshold = new JTextField();
+		txtThreshold.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		txtThreshold.setText("   Threshold");
+		content.add(txtThreshold, "cell 0 3");
+		txtThreshold.setColumns(10);
+		
+		txtOut = new JTextField();
+		txtOut.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		txtOut.setText("       Out");
+		content.add(txtOut, "cell 0 3,growx");
+		txtOut.setColumns(10);
+		
+		JTextArea txtrNowPleaseSelect = new JTextArea();
+		txtrNowPleaseSelect.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
+		txtrNowPleaseSelect.setForeground(new Color(220, 20, 60));
+		txtrNowPleaseSelect.setBackground(new Color(0, 191, 255));
+		txtrNowPleaseSelect.setText("Now please select trades file in CSV format");
+		content.add(txtrNowPleaseSelect, "cell 0 4,grow");
+		
+		JButton fileButton = new JButton("Choose Your File");
+		fileButton.setForeground(new Color(218, 165, 32));
+		fileButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		content.add(fileButton, "cell 0 5,alignx center");
+		
+		JTextArea txtrNowLetsRun = new JTextArea();
+		txtrNowLetsRun.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		txtrNowLetsRun.setForeground(new Color(220, 20, 60));
+		txtrNowLetsRun.setBackground(new Color(0, 191, 255));
+		txtrNowLetsRun.setText("Now Lets Run The Module Based on your Inputs");
+		content.add(txtrNowLetsRun, "cell 0 6,grow");
+		
+		JButton okButton = new JButton("Run Application");
+		okButton.setForeground(new Color(218, 165, 32));
+		okButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		content.add(okButton, "cell 0 7,alignx center");
 		window.setSize(350, 300);
 		window.setLocation(100, 100);
 		window.setVisible(true);
-		window.setResizable(false);
 
 	}
 
