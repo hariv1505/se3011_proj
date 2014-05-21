@@ -1,5 +1,5 @@
-Starting time at 2014-05-13 12:36:47 +1000
-PARAMETERS ARE: n = 3, TH = 0.0, input = C:\Users\Hari\Dropbox\SENG3011_proj\bhp5Feb13.csv, output = newEntries.csv
+Starting time at 2014-05-21 10:54:03 +1000
+PARAMETERS ARE: n = 3, TH = 0.00005, input = C:\Users\Hari\Dropbox (Personal)\SENG3011\bhp5Feb13.csv, output = newEntries.csv
 
 Number of total records: 100226
 Number of total TRADES: 16485
@@ -9,9 +9,9 @@ Returns gathered.
 
 SMAs gathered.
 
-3532 ENTER transactions gathered.
+2306 ENTER transactions gathered.
 
 File created - see 'newEntries.csv'
 
-Ending time at 2014-05-13 12:36:54 +1000
-Total time was 7.57857 seconds.
+Ending time at 2014-05-21 10:54:11 +1000
+Total time was 7.520908 seconds.
