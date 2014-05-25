@@ -21,9 +21,9 @@ import java.awt.event.WindowEvent;
  
     private static Frame f = new Frame ();
  
-    public static void main (String[] args) {
+	public static void main (String[] args) {
        f.setTitle ("Java 2D Curve Demo");
-       f.setBackground (Color.cyan);
+       f.setBackground (Color.white);
        f.setSize (600, 600);
        class WindowClosingListener extends WindowAdapter {
  	 public void windowClosing (WindowEvent evt) { close(); }
@@ -39,13 +39,7 @@ import java.awt.event.WindowEvent;
        System.exit(0);
     }
  
-    private static final Point2D.Double[] basePoints = {
-       new Point2D.Double (10, 17),
-       new Point2D.Double (10, 360),
-   //    new Point2D.Double (360, 180),
-       new Point2D.Double (360, 360),
-       
-    };
+
  
     private static final Point2D.Double[] curvePoints = {
     	//new Point2D.Double (10, 180),
@@ -66,8 +60,30 @@ import java.awt.event.WindowEvent;
     	//new Point2D.Double (80, 445)
     };
     
+    private static final Point2D.Double[] BuyPoints = {
+    	//new Point2D.Double (10, 180),
+    	//new Point2D.Double (30, 30),
+    	//new Point2D.Double (50, 50),
+    	
+    	new Point2D.Double (70, 200),
+    	
+    	new Point2D.Double (300, 80),
+    	
+    	//new Point2D.Double (80, 445)
+    };
     
+    private static final Point2D.Double[] sellPoints = {
+    	//new Point2D.Double (10, 180),
+    	//new Point2D.Double (30, 30),
+    	//new Point2D.Double (50, 50),
+    
+    	new Point2D.Double (30, 350),
+    	
+    	new Point2D.Double (250, 350),
    
+    	//new Point2D.Double (80, 445)
+    };
+    
     private static Rectangle2D square (Point2D p) {
        final double x=p.getX()-2,y=p.getY()-2;
        final int w=5,h=5;
@@ -78,44 +94,50 @@ import java.awt.event.WindowEvent;
        final Graphics2D g2 = (Graphics2D) g;
        g2.setRenderingHint (RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
        final BasicStroke s = new BasicStroke (2);
-  
-       // Paint four control points
-      // g2.setPaint (Color.gray);
-       //g2.fill (square(basePoints[0]));
-       //g2.fill (square(basePoints[1]));
-       //g2.fill (square(basePoints[2]));
-  //     g2.fill (square(basePoints[3]));
-       
+// place all point
+    
        for(int i = 0; i <curvePoints.length; i++) {
-	       g2.setPaint (Color.red);
+	       g2.setPaint (Color.gray);
 	       Point2D.Double newpoint =new Point2D.Double (80+curvePoints[i].x, 445-curvePoints[i].y);
 	       g2.fill (square(newpoint));
-	    
+	       
        }
-     
-//       g2.setPaint (Color.blue);
-//       g2.setStroke (s);
-//       final CubicCurve2D c = new CubicCurve2D.Double ();
-//       c.setCurve (cc,0);
-//       g2.draw (c);
+       for(int i = 0; i <BuyPoints.length; i++) {
+	       g2.setPaint (Color.blue);
+	       Point2D.Double newpoint =new Point2D.Double (80+BuyPoints[i].x, 445-BuyPoints[i].y);
+	       g2.fill (square(newpoint));
+	       int x=  (int)(80+BuyPoints[i].x);
+	       int y=  (int)(460-BuyPoints[i].y);
+	       g.drawString("Buy", x, y);
+	       
+	       
+       }
+       for(int i = 0; i <sellPoints.length; i++) {
+	       g2.setPaint (Color.red);
+	       Point2D.Double newpoint =new Point2D.Double (80+sellPoints[i].x, 445-sellPoints[i].y);
+	       g2.fill (square(newpoint));
+	       int x=  (int)(80+sellPoints[i].x);
+	       int y=  (int)(445-sellPoints[i].y);
+	       g.drawString("Sell", x, y);
+	       
+       }
  
-       // construct base lines
        int drawHigh[] = new int[curvePoints.length];
        int drawwidth[] = new int[curvePoints.length];
 
-       //折点坐标
+       String mongth[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec" };
        for (int i = 0; i < curvePoints.length; i++) {
            drawHigh[i] = (int) (445 - curvePoints[i].y);
            drawwidth[i] = (int) (80 + curvePoints[i].x) ;
            g2.setPaint (Color.black);
-           g.drawString(""+ i*80, 110 + i * 80, 465);
+          // g.drawString(""+ i*80, 110 + i * 80, 465);
        }
-       //g2d.setXORMode(Color.WHITE);
-       //折线粗细
-      // g2.setStroke(new BasicStroke(3.0f));
-       //折线的颜色
+       for (int i = 0; i < mongth.length; i++) {
+    	   g.drawString(mongth[i], 80 + i * 40, 465);
+       }
+    // draw lines
        g2.setColor(Color.RED);
-       //画折线
+     
        g2.drawPolyline(drawwidth, drawHigh, curvePoints.length);
        int visitValue = 0;
   
@@ -123,32 +145,20 @@ import java.awt.event.WindowEvent;
            g.setColor(Color.BLACK);
            g.drawString("" + visitValue, 36, (i + 27));
            g.setColor(Color.LIGHT_GRAY);
-           g.drawLine(80, (i + 27), 520, (i + 27));
+           g.drawLine(80, (i + 27), 550, (i + 27));
            visitValue += 10;
        }
        g.setColor(Color.BLACK);
        g.drawLine(80, 40, 80, 445);
        g.drawLine(80, 445, 550, 445);
 
-      // g2.setPaint (Color.gray);
-       //g2.fill (square(curvePoints[0]));
-       //g2.setStroke (new BasicStroke (1));
-       //g2.draw (new Line2D.Double (basePoints[0], basePoints[1]));
-       //g2.draw (new Line2D.Double (basePoints[1], basePoints[2]));
-   //    g2.draw (new Line2D.Double (basePoints[1], basePoints[3]));
+    
        g.setColor(Color.BLACK);
        g.setFont(new Font("Arial Unicode MS", Font.PLAIN, 22));
-       g.drawString("Graph", 15, 25);
-      // g2.setPaint (Color.blue);
-       //g2.setStroke (s);
-       //final CubicCurve2D q = new CubicCurve2D.Double ();
-       //final CubicCurve2D x = new CubicCurve2D.Double ();
-       //x.setCurve (curvePoints1,0);
-       //x.setLine(l);
-      // q.setCurve (curvePoints,0);
-      // g2.draw(x);
-      // g2.draw (q);
- 
+       g.drawString("Graph", 10, 25);
+       g.setFont(new Font("Arial Unicode MS", Font.PLAIN, 15));
+       g.drawString("Price ($)", 10, 45);
+       g.drawString("Time (dates)", 500, 500);
     }
  
  }
