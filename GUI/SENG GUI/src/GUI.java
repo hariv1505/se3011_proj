@@ -331,6 +331,8 @@ public class GUI {
 							"Output file name cannot be same as input file name.");
 					endRun(null);
 					return;
+				} else {
+					outVal = "newEntries.csv";
 				}
 			}
 
@@ -367,6 +369,9 @@ public class GUI {
 			JOptionPane.showMessageDialog(null, "Could not open " + modulePath);
 			e1.printStackTrace();
 		}
+		
+		Graph g = new Graph(filePath, outVal);
+		
 		endRun(null);
 		
 	}
