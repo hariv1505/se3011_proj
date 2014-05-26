@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -120,41 +121,48 @@ public class GUI {
 		dir += "..\\..";
 		
 		content = new JPanel();
-		content.setBackground(new Color(0, 191, 255));
+		content.setBackground(new Color (255, 255, 255));
 
 		JFrame window = new JFrame("MSM Module");
 		window.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		window.setContentPane(content);
 		content.setLayout(new MigLayout("", "[299px,grow][grow][5px][1px][4px][1px][4px][9px][][][]", "[66px][66px][66px][66px][66px][66px][66px][66px][66px][66px][66px]"));
+		ImageIcon bg =new ImageIcon("bg1.jpg");
 		
+		JLabel lable= new JLabel(bg);
 		JLabel txtrWelcome1 = new JLabel();
-		txtrWelcome1.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
-		txtrWelcome1.setForeground(new Color(220, 20, 60));
+		lable.setBounds(0, 0, bg.getIconWidth(), bg.getIconHeight());
+		window.getLayeredPane().add(lable,new Integer(Integer.MIN_VALUE));
+		JPanel jp=(JPanel)window.getContentPane();
+		jp.setOpaque(false);
+		txtrWelcome1.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		txtrWelcome1.setForeground(new Color(200, 150, 0));
 		txtrWelcome1.setBackground(new Color(0, 191, 255));
 		txtrWelcome1.setText("Welcome to the Momentum Strategy Module!");
 		content.add(txtrWelcome1, "cell 0 0,alignx center,aligny center");
 		
 		JLabel txtrWelcome2 = new JLabel();
 		txtrWelcome2.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
-		txtrWelcome2.setForeground(new Color(220, 20, 60));
+		txtrWelcome2.setForeground(new Color(111, 255, 96));
 		txtrWelcome2.setBackground(new Color(0, 191, 255));
 		txtrWelcome2.setText("Firstly, select the module you would like to use by clicking the button below");
 		content.add(txtrWelcome2, "cell 0 1,alignx center,aligny center");
 		
 		JButton ModuleButton = new JButton("Choose Your Module");
-		ModuleButton.setForeground(new Color(218, 165, 32));
-		ModuleButton.setBackground(new Color(0, 206, 209));
+		ModuleButton.setForeground(new Color(0, 0, 0));
+	//	ModuleButton.setBackground(new Color(0, 206, 209));
 		ModuleButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		content.add(ModuleButton, "cell 0 2,alignx center,aligny top");
 		
 		mPath = new JLabel();
 		mPath.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		mPath.setForeground(new Color(255,255,255));
 		mPath.setBackground(new Color(0, 191, 255));
 		content.add(mPath, "cell 0 3,alignx left,aligny top");
 		
 		JLabel txtrNowPleaseEnter = new JLabel();
-		txtrNowPleaseEnter.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		txtrNowPleaseEnter.setForeground(new Color(220, 20, 60));
+		txtrNowPleaseEnter.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		txtrNowPleaseEnter.setForeground(new Color(111, 255, 96));
 		txtrNowPleaseEnter.setBackground(new Color(0, 191, 255));
 		txtrNowPleaseEnter.setText("Now please enter the 'window size' value, and "
 				+ "'threshold' value:");
@@ -163,31 +171,32 @@ public class GUI {
 		paintInputs(content);
 		
 		JLabel txtrNowPleaseSelect = new JLabel();
-		txtrNowPleaseSelect.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
-		txtrNowPleaseSelect.setForeground(new Color(220, 20, 60));
+		txtrNowPleaseSelect.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		txtrNowPleaseSelect.setForeground(new Color(111, 255, 96));
 		txtrNowPleaseSelect.setBackground(new Color(0, 191, 255));
 		txtrNowPleaseSelect.setText("Now, please select trades file in CSV format.");
 		content.add(txtrNowPleaseSelect, "cell 0 6,grow");
 		
 		JButton fileButton = new JButton("Choose Your File");
-		fileButton.setForeground(new Color(218, 165, 32));
+		fileButton.setForeground(new Color(0, 0, 0));
 		fileButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		content.add(fileButton, "cell 0 7,alignx center");
 		
 		fPath = new JLabel();
-		fPath.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		fPath.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		fPath.setForeground(new Color(255,255,255));
 		fPath.setBackground(new Color(0, 191, 255));
 		content.add(fPath, "cell 0 8,grow");
 		
 		JLabel txtrNowLetsRun = new JLabel();
 		txtrNowLetsRun.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
-		txtrNowLetsRun.setForeground(new Color(220, 20, 60));
+		txtrNowLetsRun.setForeground(new Color(111, 255, 96));
 		txtrNowLetsRun.setBackground(new Color(0, 191, 255));
 		txtrNowLetsRun.setText("Now, let's run The Module based on your inputs.");
 		content.add(txtrNowLetsRun, "cell 0 9,grow");
 		
 		JButton okButton = new JButton("Run Application");
-		okButton.setForeground(new Color(218, 165, 32));
+		okButton.setForeground(new Color(0, 0, 0));
 		okButton.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		content.add(okButton, "cell 0 10,alignx center,aligny top");
 		
