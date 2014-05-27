@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 
 public class Graph {
 	 private static  ArrayList<MSMPoint> curvePoints;	//new Point2D.Double (80, 445)
@@ -56,9 +58,9 @@ public class Graph {
 			    	 continue;
 			     }
 				 String[] splitLine = line.split(",");
-				 if (splitLine[12] == "B") {
+				 if (splitLine[12].equals("B")) {
 					 buyPoints.add(new MSMPoint(splitLine[1] + ", " + splitLine[2], Double.parseDouble(splitLine[4])));
-				 } else if (splitLine[12] == "A") {
+				 } else if (splitLine[12].equals("A")) {
 					 sellPoints.add(new MSMPoint(splitLine[1] + ", " + splitLine[2], Double.parseDouble(splitLine[4])));
 				 }
 				 i++;
@@ -72,11 +74,15 @@ public class Graph {
 			 
 			 this.create();
 		 } catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
+			 	JOptionPane.showMessageDialog(null,
+						"File was not found - cannot create graph. The module must have failed.");
 				e.printStackTrace();
+				return;
 			} catch (IOException e) {
-			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null,
+				"File was not found - cannot create graph. The module must have failed.");
 			e.printStackTrace();
+			return;
 		}
 	 }
 	 

@@ -127,7 +127,7 @@ public class GUI {
 		window.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		window.setContentPane(content);
 		content.setLayout(new MigLayout("", "[299px,grow][grow][5px][1px][4px][1px][4px][9px][][][]", "[66px][66px][66px][66px][66px][66px][66px][66px][66px][66px][66px]"));
-		ImageIcon bg =new ImageIcon("bg1.jpg");
+		ImageIcon bg =new ImageIcon("resources/bg1.jpg");
 		
 		JLabel lable= new JLabel(bg);
 		JLabel txtrWelcome1 = new JLabel();
@@ -203,6 +203,7 @@ public class GUI {
 		loading = new JLabel();
 		loading.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		loading.setBackground(new Color(0, 191, 255));
+		loading.setForeground(new Color(255, 255, 255));
 		content.add(loading, "cell 0 11,grow");
 		
 		window.setSize(540, 500);
@@ -244,7 +245,7 @@ public class GUI {
 			loading.setText("Loading...");
 			EventQueue.invokeLater( new Runnable() {
                 public void run() {
-                    MSMExecute();    //Action performer event
+                    MSMExecute();
                 }
             });
 			
@@ -280,8 +281,71 @@ public class GUI {
 		}
 		
 		String comm;
-		
-		if (modulePath == "msm_v_1_2.exe") {
+		if( modulePath.contains("menith-2.2.jar")){
+		   comm = "java -jar "+ modulePath;
+		   if (nVal != null && !nVal.equals("") && !nVal.equals(nField.getDefText())) {
+				try {
+					Integer.parseInt(nVal);
+					comm += " " + nVal;
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Invalid window size.");
+					ex.printStackTrace();
+					endRun(ex);
+					return;
+				}
+			} else {
+				JOptionPane.showMessageDialog(null,
+						"Invalid window size");
+				endRun(null);
+				return;
+			}
+
+			if (thVal != null && !thVal.equals("") && !thVal.equals(thField.getDefText())) {
+				try {
+					Double.parseDouble(thVal);
+					comm += " " + thVal;
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Invalid threshold size.");
+					ex.printStackTrace();
+					endRun(ex);
+					return;
+				}
+			} else {
+				JOptionPane.showMessageDialog(null,
+						"Invalid threshold");
+				endRun(null);
+				return;
+			}
+
+			comm += " " + filePath;
+			
+			String[] inputFileName = filePath.split("\\\\");
+			if (outVal != null && !outVal.equals("") && !outVal.equals(outField.getDefText())) {
+				if (isValidName(outVal)) {
+					if (outVal.equals(inputFileName[inputFileName.length - 1])) {
+						JOptionPane.showMessageDialog(null,
+								"Output file name cannot be same as input file name.");
+						return;
+					} else {
+						comm += " " + outVal;
+					}
+					
+				} else {
+					JOptionPane.showMessageDialog(null,
+							"Invalid output file name");
+					endRun(null);
+					return;
+				}
+			} else {
+				JOptionPane.showMessageDialog(null,
+						"Invalid output file name");
+				endRun(null);
+				return;
+			}
+			
+			comm += " log.txt";
+		   
+		} else if (modulePath.contains("msm_v_1_2.exe")) {
 			comm = modulePath + " " + "-i '" + filePath + "'";
 
 			if (nVal != null && !nVal.equals("") && !nVal.equals(nField.getDefText())) {
@@ -294,6 +358,8 @@ public class GUI {
 					endRun(ex);
 					return;
 				}
+			} else {
+				nVal = "";
 			}
 
 			if (thVal != null && !thVal.equals("") && !thVal.equals(thField.getDefText())) {
@@ -306,6 +372,8 @@ public class GUI {
 					endRun(ex);
 					return;
 				}
+			} else {
+				thVal = "";
 			}
 
 			String[] inputFileName = filePath.split("\\\\");
@@ -338,12 +406,15 @@ public class GUI {
 
 			System.out.println(comm);
 		} else {
-			comm = modulePath;
+			JOptionPane.showMessageDialog(null, "Could not open " + modulePath + " - we cannot assure compatibility.");
+			endRun(null);
+			return;
 		}
 		
 		Process p;
 
 		try {
+			System.out.println(comm);
 			p = Runtime.getRuntime().exec(comm);
 			p.waitFor();
 			BufferedReader reader = new BufferedReader(
@@ -355,7 +426,7 @@ public class GUI {
 			while ((line = reader.readLine()) != null) {
 				output.append(line + "\n");
 			}
-			JOptionPane.showMessageDialog(null, "Done. Please see log.txt in directory of module.");
+			JOptionPane.showMessageDialog(null, "Done. Please see the log file in directory of module.");
 			try {
 				String winDir = dir.replace("/", "\\");
 				System.out.println("explorer \"" + winDir + "\"");
