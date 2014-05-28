@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {background-color:#99FF99}
+p {color:blue;font-family:garamond;font-size:30px;text-align:center;}
+h1 {color:red;font-family:garamond;font-size:40px;text-align:center;}
+p2 {color:green;font-family:garamond;font-size:30px;text-align:center;}
+</style>
+<body>
+
+<h1>MSM Module - The Gs</h1>
+
+<p>
+Available Releases:
+<br>
+<table border="6" width="800" align="center">
+
+<tr>
+<td colspan="2" style="background-color:Moccasin  ;font-family:garamond;color:FireBrick;font-size:30px;">
+Version 1.2
+</td>
+</tr>
+<tr>
+  <td style="background-color:Moccasin;width:100px;font-family:garamond;color:FireBrick;font-size:25px;">
+    <b><a style ="color:Indigo;" href="msm_v_1_2.zip" download="msm_v_1_2.zip">Download</a></b>
+  </td>
+  <td style="background-color:Moccasin  ;height:200px;width:400px;font-family:garamond;color:FireBrick;font-size:20px;">
+
+  Date of Release: 1/05/2014
+  <br><br>
+  <b>Compatibility:</b><br/>
+  Windows XP, Vista, 7, 8, 8.1
+  <br><br>
+  <b>UPDATE:</b><br/>
+  Amendments have been made to accomodate for various inputs, whilst accounting for user error. README.txt has also been provided.<br/>
+  Please use:
+  <br><code>msm_v_1_2.exe -h</code><br/>
+  on the command line, or read README.txt.
+  <br/><br/>
+  This version, reads CSV files and then analyses, using the Momentum strategy, makes choices to buy and sell stocks
+  according to the data provided. It then produces a resultant file with updated trades.
+  The module requires two parameters; The required CSV file to be read in and the parameters file - both which are provided in the module
+  <br><br>
+  Download the zip file, then extract it to a destination folder of your choice. To use the module in standalone mode, using the Windows Command Prompt, change directory to the newly unzipped directory. When navigated into the directory, run msm_v_1_2.exe using the command: 
+  <br/><br><code> msm_v_1_2.exe </code><br/>
+  for Windows<br/><br/>
+  Alternatively, the application can be double-clicked.<br><br>
+  The application can also be called from other programs. An example of doing so is using the <b>Process</b> class, in Java. The namely example is:<br>
+  <br/><code>Process p = Runtime.getRuntime().exec("cmd /C <DIRECTORY_OF_EXTRACTED_MODULE>/msm_v_1_2");</code><br><br/>
+  which will generate an output that can be read in using the <b>BufferedReader</b> class
+  <br><br>
+  To change the parameters for the file, namely the 'n' (window size for Simple Moving Averages) and 'threshold' values, please open 'parameters.param' using a text-editor. You will notice that the first number represents 'n' whereas the second number represents the threshold decimal.
+  <br><br>
+  The required files are in the directory, and after execution the resultant CSV and log file will be created in the directory.
+  <br><br>
+  </td>
+</tr>
+
+<br/><br/><br/><br/>
+
+
+<tr>
+<td colspan="2" style="background-color:Moccasin  ;font-family:garamond;color:FireBrick;font-size:30px;">
+Version 1.1
+</td>
+</tr>
+<tr>
+  <td style="background-color:Moccasin;width:100px;font-family:garamond;color:FireBrick;font-size:25px;">
+    <b><a style ="color:Indigo;" href="msm_v_1_1.zip" download="msm_v_1_1.zip">Download</a></b>
+  </td>
+  <td style="background-color:Moccasin  ;height:200px;width:400px;font-family:garamond;color:FireBrick;font-size:20px;">
+
+  Date of Release: 17/04/2014
+  <br><br>
+  Compatibility: Windows XP, Vista, 7, 8
+  <br><br>
+  <b>UPDATE:</b><br/>
+  Amendments have been made to performance, and versatility with input.
+  <br/><br/>
+  This version, reads CSV files and then analyses, using the Momentum strategy, makes choices to buy and sell stocks
+  according to the data provided. It then produces a resultant file with updated trades.
+  The module requires two parameters; The required CSV file to be read in and the parameters file - both which are provided in the module
+  <br><br>
+  Download the zip file, then extract it to a destination folder of your choice. To use the module in standalone mode, using the Windows Command Prompt,
+  change directory to the newly unzipped directory. When navigated into the directory, run msm_v_1_1.exe using the command: <br/>
+  <br><code> msm_v_1_1 </code><br/><br/>
+  Alternatively, the application can be double-clicked.<br><br>
+  The application can also be called from other programs. An example of doing so is using the <b>Process</b> class, in Java. The namely example is:<br>
+  <br/><code>Process p = Runtime.getRuntime().exec("cmd /C <DIRECTORY_OF_EXTRACTED_MODULE>/msm_v_1_1");</code><br><br/>
+  which will generate an output that can be read in using the <b>BufferedReader</b> class
+  <br><br>
+  To change the parameters for the file, namely the 'n' (window size for Simple Moving Averages) and 'threshold' values, please open 'parameters.param' using a text-editor. You will notice that the first number represents 'n' whereas the second number represents the threshold decimal.
+  <br><br>
+  The required files are in the directory, and after execution the resultant CSV and log file will be created in the directory.
+  <br><br>
+  </td>
+</tr>
+
+<br/><br/><br/><br/>
+<tr>
+<td colspan="2" style="background-color:Moccasin  ;font-family:garamond;color:FireBrick;font-size:30px;">
+Version 1.1
+</td>
+</tr>
+<tr>
+  <td style="background-color:Moccasin;width:100px;font-family:garamond;color:FireBrick;font-size:25px;">
+    <b><a style ="color:Indigo;" href="msm_v_1_0.zip" download="msm_v_1_0.zip">Download</a></b>
+  </td>
+  <td style="background-color:Moccasin  ;height:200px;width:400px;font-family:garamond;color:FireBrick;font-size:20px;">
+
+  Date of Release: 03/04/2014
+  <br><br>
+  Compatibility: Windows XP, Vista, 7, 8
+  <br><br>
+  This version, reads CSV files and then analyses, using the Momentum strategy, makes choices to buy and sell stocks
+  according to the data provided. It then produces a resultant file with updated trades.
+  The module requires two parameters; The required CSV file to be read in and the parameters file - both which are provided in the module
+  <br><br>
+  Download the zip file, then extract it to a destination folder of your choice. To use the module in standalone mode, using the Windows Command Prompt,
+  change directory to the newly unzipped directory. When navigated into the directory, run msm_v_1_0.exe using the command: <br/>
+  <br/><code> msm_v_1_0 </code><br/><br/>
+  Alternatively, the application can be double-clicked.<br><br>
+  The application can also be called from other programs. An example of doing so is using the <b>Process</b> class, in Java. The namely example is:<br>
+  <br/><code>Process p = Runtime.getRuntime().exec("cmd /C <DIRECTORY_OF_EXTRACTED_MODULE>/msm_v_1_0");</code><br><br/>
+  which will generate an output that can be read in using the <b>BufferedReader</b> class
+  <br><br>
+  To change the parameters for the file, namely the 'n' (window size for Simple Moving Averages) and 'threshold' values, please open 'parameters.param' using a text-editor. You will notice that the first number represents 'n' whereas the second number represents the threshold decimal.
+  <br><br>
+  The required files are in the directory, and after execution the resultant CSV and log file will be created in the directory.
+  <br><br>
+  </td>
+</tr>
+
+
+<tr>
+<td colspan="2" style="background-color:Moccasin  ;text-align:center;">
+Copyright © "The G's"</td>
+</tr>
+
+
+
+</table>
+
+</p>
+
+
+
+</body>
+</html> 

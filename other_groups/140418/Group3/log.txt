@@ -1,0 +1,15 @@
+BEGIN LOG
+Developer Team: Anshul n da boyz
+Module Name: Menith
+Module Version: 1.0
+Parameters: []
+Success: True
+Number of Lines: 1
+Number of TRADEs: 0
+Success: True
+Start Time: Thu May 01 13:59:18 EST 2014
+End Time: Thu May 01 13:59:18 EST 2014
+Duration: 31
+Operated on file: ../bhp5Feb13.csv
+Returned file: newEntries.csv
+END LOG

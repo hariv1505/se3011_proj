@@ -160,7 +160,7 @@ def create_entries(result_transactions, all_trades, input, output)
   new_records = all_trades.dup
   file = File.new(output, "w")
     
-  file.write("Instrument,Date,Time,Record Type,Price,Volume,Undisclosed Volume,Value,Qualifiers,Trans ID,Bid ID,Ask ID,Bid/Ask,Entry Time,Old Price,Old Volume,Buyer Broker ID,Seller Broker ID" + "\n")   
+  file.write("#Instrument,Date,Time,Record Type,Price,Volume,Undisclosed Volume,Value,Qualifiers,Trans ID,Bid ID,Ask ID,Bid/Ask,Entry Time,Old Price,Old Volume,Buyer Broker ID,Seller Broker ID" + "\n")   
   i=0
     
   result_transactions.each do |n|
@@ -187,7 +187,7 @@ def read_flags
       $params[0][:th] = th.to_f;
     end
 
-    opts.on('-i inp', '--input=inp', 'Input file name (file must contain CSV data, and cannot be "newEntries.csv")') do |inp|
+    opts.on('-i inp', '--input=inp', 'Input file name (file must contain CSV data in Sirca format)') do |inp|
       $params[0][:i] = inp.to_s
     end
 

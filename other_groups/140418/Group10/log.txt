@@ -1,0 +1,20 @@
+**********************************
+*     Momentum Strategy          *
+*   Created by Group  1          *
+*   Aaron Wood, Mina Hany,       *
+*   and Nathan Sturgess.         *
+**********************************
+Version: 1.0, Last updated 
+
+Input file = in.csv
+
+The following settings will be used:
+		n: 3
+ 		Threshold: 0.001
+		startTime: 
+		endTime: 
+
+
+------------------------------------
+FATAL ERROR!
+can not read options configuration file 'momentum_config.cfg'

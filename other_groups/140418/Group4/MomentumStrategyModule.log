@@ -1,0 +1,14 @@
+Fire Breathing Rubber Duckies
+Momentum Strategy Module - Version 1.0
+
+01-May-2014 14:03:12	INFO: Selecting Trades
+01-May-2014 14:03:13	INFO: Completed with 16485 Trades selected from 100227 lines
+01-May-2014 14:03:13	INFO: Calculating Returns
+01-May-2014 14:03:15	INFO: Completed
+
+Status              : Completed without error
+Start Time          : 01-May-2014 14:03:12
+End time            : 01-May-2014 14:03:15
+Elapsed time        : 2904 ms
+Input file          : bhp5Feb13.csv
+Output produced     : MomentumStrategyModule.log
