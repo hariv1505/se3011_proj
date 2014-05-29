@@ -159,8 +159,10 @@ public class Plotter extends Canvas {
 	 g.drawString(arr1[0], 20, 620);
      for (int i = 0; i < 10; i++) {    	   
     	 String str=curvePoints[(curvePoints.length / 10) * i].getDate();
-    			 String[] arr = str.split(",");
-  	   g.drawString(arr[1], 80 + i * 130, 620);
+    	 String[] arr2 = str.split(",");
+    			 String[] arr = arr2[1].split("\\.");
+                  
+  	   g.drawString(arr[0], 80 + i * 130, 620);
      }
   // draw lines
      g2.setColor(new Color(114,98,255));
